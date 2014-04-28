@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="BardisCMS : BardisCMS is a Symfony2 (v.2.4.4) distribution with integrated Zurb  Foundation 5 (Bower and Grunt with custom builds included for better workflow) for front end and all the major bundles pre-configured (Sonata Admin, User, Media, FOSUser, KnpMenu, Guzzle) combined with extra bundles to provide a fully functional out of the box CMS for websites" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>BardisCMS</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/bardius/BardisCMS">View on GitHub</a>
+
+          <h1 id="project_title">BardisCMS</h1>
+          <h2 id="project_tagline">BardisCMS is a Symfony2 (v.2.4.4) distribution with integrated Zurb  Foundation 5 (Bower and Grunt with custom builds included for better workflow) for front end and all the major bundles pre-configured (Sonata Admin, User, Media, FOSUser, KnpMenu, Guzzle) combined with extra bundles to provide a fully functional out of the box CMS for websites</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/bardius/BardisCMS/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/bardius/BardisCMS/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p><a href="https://travis-ci.org/bardius/BardisCMS"><img src="https://travis-ci.org/bardius/BardisCMS.svg?branch=master" alt="Build Status"></a>
+<a href="https://www.versioneye.com/user/projects/535c8e24fe0d073b48000126"><img src="https://www.versioneye.com/user/projects/535c8e24fe0d073b48000126/badge.png" alt="Dependency Status"></a>
+<a href="https://www.versioneye.com/user/projects/535c8e18fe0d073b4800011c"><img src="https://www.versioneye.com/user/projects/535c8e18fe0d073b4800011c/badge.png" alt="Dependency Status"></a>
+<a href="https://packagist.org/packages/bardis/cms-symfony2"><img src="https://poser.pugx.org/bardis/cms-symfony2/v/stable.png" alt="Latest Stable Version"></a> 
+<a href="https://packagist.org/packages/bardis/cms-symfony2"><img src="https://poser.pugx.org/bardis/cms-symfony2/downloads.png" alt="Total Downloads"></a> 
+<a href="http://gruntjs.com/"><img src="https://cdn.gruntjs.com/builtwith.png" alt="Built with Grunt"></a>
+<a href="https://packagist.org/packages/bardis/cms-symfony2"><img src="https://poser.pugx.org/bardis/cms-symfony2/license.png" alt="License"></a></p>
+
+<p><img src="http://www.bardis.info/bardisCMS.png" alt=""></p>
+
+<h1>
+<a name="symfony2-v244-distribution-with-integrated-zurb-foundation-5-" class="anchor" href="#symfony2-v244-distribution-with-integrated-zurb-foundation-5-"><span class="octicon octicon-link"></span></a>Symfony2 (v.2.4.4) distribution with integrated Zurb Foundation 5 </h1>
+
+<p>BardisCMS is a Symfony2 (v.2.4.4) distribution with integrated Zurb Foundation 5 Framework.</p>
+
+<p>Travis CI, Bower and Grunt with custom builds are included for better workflow on front end.</p>
+
+<p>All the major bundles are pre-configured (Sonata Admin, Sonata User, Sonata Media, FOSUser, KnpMenu, Guzzle) combined with my own bundles (Page, Settings, ContentBlocks, Blog, Comments, Tags, Categories) to provide a fully functional out of the box responsive CMS for websites with exceptional performance, usage of REST API's and caching abilities.</p>
+
+<p>A Skeleton Bundle is provided as part of the CMS so new content types/functionality that comply with the current architecture can easily be added.</p>
+
+<p>You can browse the Git repository, that I update with big releases every couple of months or so, and use freely for your projects.</p>
+
+<p>You can find the requirements for Symfony2 here <a href="http://symfony.com/doc/current/reference/requirements.html">http://symfony.com/doc/current/reference/requirements.html</a><br>
+You can find the documentation for Symfony2 here <a href="http://symfony.com/doc/current/book/index.html">http://symfony.com/doc/current/book/index.html</a><br>
+You can find the documentation for Zurb Foundation 5 here <a href="http://foundation.zurb.com/docs/">http://foundation.zurb.com/docs/</a></p>
+
+<p>Requirements</p>
+
+<ul>
+<li>
+<a href="http://www.php.net">PHP</a> 5.3 or later</li>
+<li>Installation via <a href="http://getcomposer.org/">Composer</a>
+</li>
+</ul><p>The CMS requires the existence of 3 pages to work. These are the homepage, the 404 page and the tagged page.  </p>
+
+<p>SkeletonBundle is a fully structured bundle with simple functionalities (similar to normal pages) so it can be cloned to create new bundles for new content types.  </p>
+
+<h2>
+<a name="quick-start" class="anchor" href="#quick-start"><span class="octicon octicon-link"></span></a>Quick Start</h2>
+
+<p>The fastest way to get everything running is:</p>
+
+<pre><code>1. git clone https://github.com/bardius/BardisCMS.git
+2. cd BardisCMS
+3. composer install
+4. create a database
+5. alter your app/config/parameters.yml with your db details
+6. npm install -g bower grunt-cli (if you have never installed them in past)
+7. npm install
+8. bower install
+9. bardisCMS-deploy.sh 
+10. setup your vhost
+</code></pre>
+
+<h2>
+<a name="deployment--local-installation" class="anchor" href="#deployment--local-installation"><span class="octicon octicon-link"></span></a>Deployment / Local Installation</h2>
+
+<p>Please follow the steps below for a complete new install.  </p>
+
+<ol>
+<li><p>You need to do a git clone of the git repo<br>
+git clone</p></li>
+<li><p>Install composer<br><a href="http://getcomposer.org/download/">http://getcomposer.org/download/</a></p></li>
+<li><p>Install packagist (<a href="https://packagist.org">https://packagist.org</a>)<br>
+curl -s <a href="http://getcomposer.org/installer">http://getcomposer.org/installer</a> | php</p></li>
+<li><p>Setup your virtual host (see details in relevant section below).</p></li>
+<li><p>Setup a database and provide the details to the app/config/parameters.yml file (see details in relevant section below).<br>
+Tip: Additionally in the same file you have to set the paths for sass, compass and java for each environment.</p></li>
+<li><p>Change the memory limit in your php.ini to 128M or more if required</p></li>
+<li><p>Set the intl PHP extension as enabled if not already (Symfony2 requirement)</p></li>
+<li><p>Run a composer install to get the vendor libraries files (composer update to get latest version)<br>
+composer.phar install</p></li>
+<li>
+<p>Run the CLI symphony2 commands  </p>
+
+<ul>
+<li>php app/console cache:clear <a href="to%20clear%20and%20warmup%20cache">--env=prod</a>
+</li>
+<li>php app/console assets:install<br>
+(to generate the bundle assets)</li>
+<li>php app/console doctrine:schema:create<br>
+(to create the database schema)</li>
+<li>php app/console doctrine:fixtures:load<br>
+(to load required/sample data to database)</li>
+<li>php app/console sonata:media:sync-thumbnails sonata.media.provider.image intro</li>
+<li>php app/console sonata:media:sync-thumbnails sonata.media.provider.image bgimage
+(to generate the required by sample data images)</li>
+<li>php app/console assetic:dump <a href="to%20generate%20the%20assets%20for%20the%20front%20end">--env=prod</a>
+</li>
+</ul>
+</li>
+</ol><h3>
+<a name="front-end-framework-setup" class="anchor" href="#front-end-framework-setup"><span class="octicon octicon-link"></span></a>Front end Framework Setup</h3>
+
+<p>Due to the use of the Zurb Foundation Framework 5 (version 5.2.2) the need for the following steps is unavoidable unless you do not need the framework at all. </p>
+
+<p>We need to install NodeJs, Node Packaged Modules, Ruby, compass, sass, foundation gems and GIT and bower dependency manager if they are not already installed to the system. </p>
+
+<p>More information can be found below at their official web sites:  </p>
+
+<pre><code>http://git-scm.com/downloads                (GIT)  
+http://nodejs.org/                  (NodeJs)  
+https://npmjs.org/                  (Node Packaged Modules)  
+http://www.rubyinstaller.org/               (Ruby)  
+https://github.com/bower/bower              (Bower)  
+http://sass-lang.com/install                (Sass)  
+http://compass-style.org/install/           (Compass)  
+http://foundation.zurb.com/docs/sass.html       (Foundation 5 - Sass based)  
+</code></pre>
+
+<p>The command line steps are:  </p>
+
+<pre><code>1. [sudo] npm install -g bower grunt-cli
+2. gem update --system
+3. gem install sass
+4. gem install compass
+5. gem install foundation
+6. [sudo] npm install
+7. bower install
+8. grunt deploy [watch]
+</code></pre>
+
+<p>Tip: In case you are behind a firewall and connection to git is refused force https for all git connections with running this in your bash git config --global url."https://".insteadOf git://</p>
+
+<pre><code>php app/console assetic:dump  [--env=prod]
+</code></pre>
+
+<p>Your project should work now and you can see your front end working.<br>
+Please Login to /admin/dashboard and alter your website settings and you are finally set to go.</p>
+
+<h2>
+<a name="parametersyml-file-example-contents" class="anchor" href="#parametersyml-file-example-contents"><span class="octicon octicon-link"></span></a>parameters.yml File example contents</h2>
+
+<p>Here is a sample setup for your parameters file</p>
+
+<pre><code>parameters:
+
+    database_driver:   pdo_mysql
+    database_host:     localhost
+    database_port:     ~
+    database_name:     dbname
+    database_user:     root
+    database_password: ~
+
+    mailer_transport:  smtp
+    mailer_host:       localhost
+    mailer_user:       ~
+    mailer_password:   ~
+
+    locale:            en
+    secret:            ThisTokenIsNotSoSecretChangeIt
+
+    javapath:          C:\Program Files\Java\jre7\bin       #usr/bin/java
+    compass.bin:       C:\Program Files\Ruby193\bin\compass #usr/bin/compass
+    sass.bin:          C:\Program Files\Ruby193\bin\sass    #usr/bin/sass
+
+    unix_socket:       ~ #for your db connection for mac users
+</code></pre>
+
+<h2>
+<a name="virtual-host-settings" class="anchor" href="#virtual-host-settings"><span class="octicon octicon-link"></span></a>Virtual Host Settings</h2>
+
+<p>Here is a sample setup for your virtual host configuration</p>
+
+<pre><code>&lt;VirtualHost *:80&gt;
+
+    DocumentRoot "c:/wamp/www/domainname/web"
+    ServerName domainname.prod
+    ServerAlias domainname.test
+    ServerAlias domainname.dev
+
+    # set some environment variables depending on host
+    SetEnvIfNoCase Host domainname\.prod domainname_env=prod
+    SetEnvIfNoCase Host domainname\.dev domainname_env=dev
+    SetEnvIfNoCase Host domainname\.test domainname_env=test
+
+    &lt;Directory c:/wamp/www/domainname/web&gt;
+
+        RewriteEngine On
+
+        # use the environment variables above to select correct 
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{ENV:domainname_env} test
+        RewriteRule ^(.*)$ app_test.php [QSA,L]
+
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{ENV:domainname_env} dev
+        RewriteRule ^(.*)$ app_dev.php [QSA,L]
+
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{ENV:domainname_env} prod
+        RewriteRule ^(.*)$ app.php [QSA,L]
+
+        Options +Indexes
+        Order Allow,Deny
+        Allow from all
+        AllowOverride All
+
+    &lt;/Directory&gt;
+
+&lt;/VirtualHost&gt;
+</code></pre>
+
+<h2>
+<a name="updating-to-the-ci-server-and-the-live-server" class="anchor" href="#updating-to-the-ci-server-and-the-live-server"><span class="octicon octicon-link"></span></a>Updating to the ci server and the live server</h2>
+
+<p>This can be done with simple steps in your SSH CLI</p>
+
+<pre><code>git pull
+php app/console cache:clear
+php doctrine:schema:update --force
+php app/console assetic dump
+</code></pre>
+
+<p>For the production server the process is the same but you should use</p>
+
+<pre><code>php app/console cache:clear --env=prod
+php app/console assetic:dump --env=prod
+</code></pre>
+
+<h2>
+<a name="known-bugs--issues--extra-configuration" class="anchor" href="#known-bugs--issues--extra-configuration"><span class="octicon octicon-link"></span></a>Known Bugs / Issues / Extra Configuration</h2>
+
+<p>If you run mac OS with mamp remember to set properly your php date.timezone settings
+(<a href="http://stackoverflow.com/questions/6194003/timezone-with-symfony-2">http://stackoverflow.com/questions/6194003/timezone-with-symfony-2</a>)</p>
+
+<p>You should find your php.ini  in /private/etc if it exists, otherwise:</p>
+
+<pre><code>sudo cp /private/etc/php.ini.default /private/etc/php.ini
+</code></pre>
+
+<p>Edit /private/etc/php.ini and set date.timezone.</p>
+
+<h2>
+<a name="skeleton-bundle-use-instructions" class="anchor" href="#skeleton-bundle-use-instructions"><span class="octicon octicon-link"></span></a>Skeleton Bundle Use instructions</h2>
+
+<p>The skeleton bundle is now ready to be used as base for the creation of new content bundles.</p>
+
+<p>The process for this is to:</p>
+
+<pre><code>01. Copy the SkeletonBundle folder and rename it properly (e.g. ProductsBundle)
+02. Edit the admin class file with the correct names for fields and variables.
+03. Edit the Controller files with correct namespaces and variable names
+04. Change the Dependency Injection configuration and extension to fit your bundle
+05. Edit the Entity file to fit your database needs
+06. Edit the repository file to suit your needs
+07. Change the bundles routing file to provide the required functional urls
+08. Alter the views
+09. Add the requested configuration values to the config.yml
+10. Add the bundle to the registered bundles list in AppKernel.php
+11. Clear cache
+12. Add the a service for the new bundle admin and add it to the sonata admin config
+13. Include the bundle routing file to the app routing
+14. Edit the menu entity so you can add menu items for that bundle
+15. Edit the tag entity so you can add menu items for that bundle
+16. Edit the category entity so you can add menu items for that bundle
+17. Edit the contentblocks entity so you can add menu items for that bundle
+18. Edit the AddMenuTypeFieldSubscriber to be able to create menu items for that bundle
+19. Edit the MenuBuilder to add the case for the link generation of your bundle
+20. doctrine:schema:update --force
+21. Create an Page in that bundle to display the filtered results with alias tagged
+</code></pre>
+
+<p>Your new bundle should now work.
+(prequisites are the PageBundle, SettingsBundle and MenuBundle)</p>
+
+<h2>
+<a name="included-bundles-list" class="anchor" href="#included-bundles-list"><span class="octicon octicon-link"></span></a>Included Bundles List</h2>
+
+<pre><code>1. FOSUserBundle (https://github.com/FriendsOfSymfony/FOSUserBundle)
+2. SonataBlockBundle (http://sonata-project.org/bundles/block/master/doc/index.html)
+3. SonataUserBundle (http://sonata-project.org/bundles/user/master/doc/index.html)
+4. SonataMediaBundle (http://sonata-project.org/bundles/media/master/doc/index.html)
+5. SonataAdminBundle (http://sonata-project.org/bundles/admin/master/doc/index.html)
+6. SonataTimelineBundle (http://sonata-project.org/bundles/timeline/master/doc/index.html)
+7. KnpMenu (http://knpbundles.com/KnpLabs/KnpMenuBundle)
+8. Guzzle (https://github.com/misd-service-development/guzzle-bundle)
+9. StFalcon TinymceBundle (http://knpbundles.com/stfalcon/TinymceBundle)
+</code></pre>
+
+<h2>
+<a name="useful-links-and-documentation" class="anchor" href="#useful-links-and-documentation"><span class="octicon octicon-link"></span></a>Useful Links and Documentation</h2>
+
+<p>Symfony2 Documentation</p>
+
+<p><a href="http://symfony.com/doc/current/index.html">http://symfony.com/doc/current/index.html</a> </p>
+
+<p>Doctrine2 ORM Documentation</p>
+
+<p><a href="http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/index.html">http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/index.html</a></p>
+
+<p>Symfony2 Cheatsheet</p>
+
+<p><a href="http://www.symfony2cheatsheet.com/">http://www.symfony2cheatsheet.com/</a></p>
+
+<p>Website with listing of available Symfony2 Bundles</p>
+
+<p><a href="http://knpbundles.com/">http://knpbundles.com/</a></p>
+
+<p>Tutorial on how to build a Blog in Symfony2</p>
+
+<p><a href="http://tutorial.symblog.co.uk/">http://tutorial.symblog.co.uk/</a></p>
+
+<p>Links to Front end Frameworks (Zurb and Boostrap)</p>
+
+<p><a href="http://bootstrap.braincrafted.com/">http://bootstrap.braincrafted.com/</a>
+<a href="http://foundation.zurb.com/">http://foundation.zurb.com/</a></p>
+
+<p>NodeJs, Node Packaged Modules, Ruby, compass, sass, foundation gems and GIT and bower dependency manager</p>
+
+<p><a href="http://git-scm.com/downloads">http://git-scm.com/downloads</a>                (GIT)</p>
+
+<p><a href="http://nodejs.org/">http://nodejs.org/</a>                  (NodeJs)</p>
+
+<p><a href="https://npmjs.org/">https://npmjs.org/</a>                  (Node Packaged Modules)</p>
+
+<p><a href="http://www.rubyinstaller.org/">http://www.rubyinstaller.org/</a>               (Ruby)</p>
+
+<p><a href="https://github.com/bower/bower">https://github.com/bower/bower</a>              (Bower)</p>
+
+<p><a href="http://sass-lang.com/install">http://sass-lang.com/install</a>                (Sass)</p>
+
+<p><a href="http://compass-style.org/install/">http://compass-style.org/install/</a>           (Compass)</p>
+
+<p><a href="http://foundation.zurb.com/docs/sass.html">http://foundation.zurb.com/docs/sass.html</a>       (Foundation 5 - Sass based)</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">BardisCMS maintained by <a href="https://github.com/bardius">bardius</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
